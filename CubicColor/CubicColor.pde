@@ -63,7 +63,7 @@ void setup() {
 void draw() {
   background(0);
 
-  // We must always step through time!
+ 
   box2d.step();
 
   // Display all the boundaries
@@ -71,17 +71,11 @@ void draw() {
     wall.display();
   }
 
-  // Display all the people
+ 
   for (Lollipop p: pops) {
     p.display();
   }
   
-
-
-  
-
-  // people that leave the screen, we delete them
-  // (note they have to be deleted from both the box2d world and our list
   for (int i = pops.size()-1; i >= 0; i--) {
     Lollipop p = pops.get(i);
     if (p.done()) {
@@ -89,19 +83,7 @@ void draw() {
     }
   }
     
-  
-    
-      
-    
-    
-  
-
-//float x = noise(xoff)*width;
-  //float y = noise(yoff)*height;
-  //xoff += 0.01;
-  //yoff += 0.01;
-
-if (mousePressed) {
+    if (mousePressed) {
     spring.update(mouseX,mouseY);
   }
   
@@ -120,7 +102,6 @@ void mouseReleased() {
 
 
  
-    //Circle o = new Circle(mouseX,mouseY);
-  //cirs.add(o);
+    
   
   
